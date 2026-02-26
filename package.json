@@ -30,22 +30,22 @@
     "clean": "rm -rf dist/"
   },
   "dependencies": {
-    "@awesome.me/webawesome": "^3.2.0",
-    "lit": "^3.2.0"
+    "@awesome.me/webawesome": "^3.2.1",
+    "lit": "^3.3.2"
   },
   "devDependencies": {
-    "@adesso-forge/ds-shared": "^1.0.0",
+    "@adesso-forge/ds-shared": "link:ds-shared",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
-    "@storybook/addon-a11y": "^10.0.0",
-    "@storybook/web-components-vite": "^10.0.0",
-    "@types/node": "^22.0.0",
-    "eslint": "^9.0.0",
+    "@storybook/addon-a11y": "^10.2.13",
+    "@storybook/addon-docs": "^10.2.13",
+    "@storybook/web-components-vite": "^10.2.13",
+    "@types/node": "^22.19.12",
+    "eslint": "^9.39.3",
     "semantic-release": "^25.0.3",
-    "storybook": "^10.0.0",
-    "typescript": "^5.7.0",
-    "vite": "^6.0.0",
-    "@storybook/addon-docs": "^10.0.0"
+    "storybook": "^10.2.13",
+    "typescript": "^5.9.3",
+    "vite": "^6.4.1"
   },
   "engines": {
     "node": ">=22.0.0"
