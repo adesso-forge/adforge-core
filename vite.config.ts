@@ -1,4 +1,4 @@
-import { createBaseConfig } from '@adesso-forge/ds-shared/build/vite-config';
+import { createBaseConfig } from '@adesso-forge/adforge-shared/build/vite-config';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 

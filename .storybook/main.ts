@@ -1,4 +1,4 @@
-import { createStorybookConfig } from '@adesso-forge/ds-shared/storybook/main';
+import { createStorybookConfig } from '@adesso-forge/adforge-shared/storybook/main';
 
 const config = createStorybookConfig({
   stories: ['../src/**/*.stories.ts'],

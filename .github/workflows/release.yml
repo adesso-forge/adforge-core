@@ -70,7 +70,7 @@ jobs:
           for repo in $REPOS; do
             echo "Dispatching to $repo..."
             gh api repos/adesso-forge/$repo/dispatches \
-              -f event_type=core-ds-update \
+              -f event_type=adforge-core-update \
               -f "client_payload[version]=${{ needs.release.outputs.version }}" \
               || { echo "::error::Failed to dispatch to $repo — check DS_DISPATCH_TOKEN"; exit 1; }
           done

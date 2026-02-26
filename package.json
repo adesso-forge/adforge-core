@@ -1,5 +1,5 @@
 {
-  "name": "@adesso-forge/core-ds",
+  "name": "@adesso-forge/adforge-core",
   "version": "1.1.5",
   "description": "Core design system layer for adesso forge — extends Web Awesome with forge-* prefix",
   "type": "module",
@@ -34,7 +34,7 @@
     "lit": "^3.3.2"
   },
   "devDependencies": {
-    "@adesso-forge/ds-shared": "1.2.3",
+    "@adesso-forge/adforge-shared": "1.2.3",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "@storybook/addon-a11y": "^10.0.0",
@@ -60,6 +60,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/adesso-forge/ds-core.git"
+    "url": "https://github.com/adesso-forge/adforge-core.git"
   }
 }

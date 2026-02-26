@@ -1,1 +1,1 @@
-# ds-core
+# adforge-core

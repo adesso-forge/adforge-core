@@ -1,4 +1,4 @@
-// @adesso-forge/core-ds — Main entry point
+// @adesso-forge/adforge-core — Main entry point
 // Registers all forge-* components and exports theme CSS paths
 
 // Register all components
