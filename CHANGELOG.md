@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/adesso-forge/ds-core/compare/v1.1.1...v1.1.2) (2026-02-26)
+
+
+### Bug Fixes
+
+* sync shared devDependencies in compat-check workflow ([22411f5](https://github.com/adesso-forge/ds-core/commit/22411f55adec9bacbc67938c12f5c0f9e348ca7a))
+
 ## [1.1.1](https://github.com/adesso-forge/ds-core/compare/v1.1.0...v1.1.1) (2026-02-26)
 
 
