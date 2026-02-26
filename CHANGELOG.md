@@ -1,3 +1,13 @@
+## [1.0.1](https://github.com/adesso-forge/ds-core/compare/v1.0.0...v1.0.1) (2026-02-26)
+
+
+### Bug Fixes
+
+* pick up latest ds-shared changes ([1271f24](https://github.com/adesso-forge/ds-core/commit/1271f2415e9143e941dccf25c548fbba1d2e2964))
+* pick up latest ds-shared changes ([dee4be2](https://github.com/adesso-forge/ds-core/commit/dee4be239575dccbcd5b477f3df27deb2598fec0))
+* pick up latest ds-shared changes ([3af1bce](https://github.com/adesso-forge/ds-core/commit/3af1bce2c211112d1228330842dcc0f58c364181))
+* remove paths-ignore filter from release workflow ([6c865a8](https://github.com/adesso-forge/ds-core/commit/6c865a808802084536ddf17116f3d90c0715dd6e))
+
 ## [1.2.2](https://github.com/adesso-forge/ds-core/compare/v1.2.1...v1.2.2) (2026-02-26)
 
 
