@@ -9,7 +9,7 @@
   },
   "registry": "https://npm.pkg.github.com",
   "components": {
-    "extended": ["button"],
+    "extended": ["button", "card", "input", "dialog", "select"],
     "excluded": [],
     "customPrefix": "forge"
   },
