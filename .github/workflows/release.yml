@@ -40,23 +40,37 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: pnpm build
-      - run: npx semantic-release
+      - name: Release
+        id: semantic
+        run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Check if released
+        id: check
+        run: |
+          NEW_VERSION=$(node -p "require('./package.json').version")
+          if git tag --list "v$NEW_VERSION" | grep -q .; then
+            echo "released=true" >> "$GITHUB_OUTPUT"
+            echo "version=$NEW_VERSION" >> "$GITHUB_OUTPUT"
+          else
+            echo "released=false" >> "$GITHUB_OUTPUT"
+          fi
+    outputs:
+      released: ${{ steps.check.outputs.released }}
+      version: ${{ steps.check.outputs.version }}
 
   notify-downstream:
     needs: release
+    if: needs.release.outputs.released == 'true'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
       - name: Dispatch to client DSs
         run: |
-          VERSION=$(node -p "require('./package.json').version")
           for repo in ds-alpha ds-beta; do
             gh api repos/adesso-forge/$repo/dispatches \
               -f event_type=core-ds-update \
-              -f "client_payload[version]=$VERSION"
+              -f "client_payload[version]=${{ needs.release.outputs.version }}"
           done
         env:
           GITHUB_TOKEN: ${{ secrets.DS_DISPATCH_TOKEN }}
