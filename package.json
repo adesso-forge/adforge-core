@@ -1,7 +1,7 @@
 {
   "name": "@adesso-forge/core-ds",
-  "version": "1.0.3",
-  "description": "Core design system layer for adesso forge \u2014 extends Web Awesome with forge-* prefix",
+  "version": "1.1.0",
+  "description": "Core design system layer for adesso forge — extends Web Awesome with forge-* prefix",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

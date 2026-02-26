@@ -1,3 +1,16 @@
+# [1.1.0](https://github.com/adesso-forge/ds-core/compare/v1.0.3...v1.1.0) (2026-02-26)
+
+
+### Bug Fixes
+
+* pin ds-shared to published version 1.2.1 ([a23264a](https://github.com/adesso-forge/ds-core/commit/a23264ad977135921fa7350f2ac65a80eac6dc7d))
+* use PACKAGES_TOKEN for cross-repo package access in CI ([b2652ad](https://github.com/adesso-forge/ds-core/commit/b2652ad04f10befcb7b9495a6766f709484721c0))
+
+
+### Features
+
+* add Renovate config, compat-check workflow, and CI improvements ([1960790](https://github.com/adesso-forge/ds-core/commit/1960790d004f513c6d8d17d11447095898f2e064))
+
 ## [1.0.3](https://github.com/adesso-forge/ds-core/compare/v1.0.2...v1.0.3) (2026-02-26)
 
 
