@@ -1,3 +1,10 @@
+## [1.1.5](https://github.com/adesso-forge/ds-core/compare/v1.1.4...v1.1.5) (2026-02-26)
+
+
+### Bug Fixes
+
+* update ds-shared to 1.2.3 ([79ba4c2](https://github.com/adesso-forge/ds-core/commit/79ba4c2b46dfc031e7d6e0204fc80d9ab21dc4b0))
+
 ## [1.1.4](https://github.com/adesso-forge/ds-core/compare/v1.1.3...v1.1.4) (2026-02-26)
 
 
