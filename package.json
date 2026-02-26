@@ -1,7 +1,7 @@
 {
   "name": "@adesso-forge/core-ds",
   "version": "1.0.3",
-  "description": "Core design system layer for adesso forge — extends Web Awesome with forge-* prefix",
+  "description": "Core design system layer for adesso forge \u2014 extends Web Awesome with forge-* prefix",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -34,7 +34,7 @@
     "lit": "^3.3.2"
   },
   "devDependencies": {
-    "@adesso-forge/ds-shared": "1.0.0",
+    "@adesso-forge/ds-shared": "1.2.1",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "@storybook/addon-a11y": "^10.2.13",

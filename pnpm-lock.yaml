@@ -16,8 +16,8 @@ importers:
         version: 3.3.2
     devDependencies:
       '@adesso-forge/ds-shared':
-        specifier: 1.0.0
-        version: 1.0.0(@awesome.me/webawesome@3.2.1(@floating-ui/utils@0.2.10)(@types/react@19.2.14))(lit@3.3.2)(vite@6.4.1(@types/node@22.19.12))
+        specifier: 1.2.1
+        version: 1.2.1(@awesome.me/webawesome@3.2.1(@floating-ui/utils@0.2.10)(@types/react@19.2.14))(lit@3.3.2)(vite@6.4.1(@types/node@22.19.12))
       '@semantic-release/changelog':
         specifier: ^6.0.3
         version: 6.0.3(semantic-release@25.0.3(typescript@5.9.3))
@@ -66,8 +66,8 @@ packages:
   '@actions/io@3.0.2':
     resolution: {integrity: sha512-nRBchcMM+QK1pdjO7/idu86rbJI5YHUKCvKs0KxnSYbVe3F51UfGxuZX4Qy/fWlp6l7gWFwIkrOzN+oUK03kfw==}
 
-  '@adesso-forge/ds-shared@1.0.0':
-    resolution: {integrity: sha512-R2Rm0lAmqeupNPECWF4jXv/TZW6qwE8PIEmOL22Ryb2Z4tJcFY+aLVGU8DKjAd5s6BaCnF0QszJOyipejuMy7w==, tarball: https://npm.pkg.github.com/download/@adesso-forge/ds-shared/1.0.0/868269ca04a5e77601ce9e8e38fc0a1b9282dbd1}
+  '@adesso-forge/ds-shared@1.2.1':
+    resolution: {integrity: sha512-Rw2NW+QG9egQ1rqsAGIJxa/K6rfM4Tw7mDzoijrjEi3qHHKKra7+Hut2WvlLoMtNfku18f0Qdbpz2m099KRXFQ==, tarball: https://npm.pkg.github.com/download/@adesso-forge/ds-shared/1.2.1/6e0996627f6d7a34e9ed3bc3fe660f56d9638085}
     engines: {node: '>=22.0.0'}
     peerDependencies:
       '@awesome.me/webawesome': ^3.2.0
@@ -2529,7 +2529,7 @@ snapshots:
 
   '@actions/io@3.0.2': {}
 
-  '@adesso-forge/ds-shared@1.0.0(@awesome.me/webawesome@3.2.1(@floating-ui/utils@0.2.10)(@types/react@19.2.14))(lit@3.3.2)(vite@6.4.1(@types/node@22.19.12))':
+  '@adesso-forge/ds-shared@1.2.1(@awesome.me/webawesome@3.2.1(@floating-ui/utils@0.2.10)(@types/react@19.2.14))(lit@3.3.2)(vite@6.4.1(@types/node@22.19.12))':
     dependencies:
       '@awesome.me/webawesome': 3.2.1(@floating-ui/utils@0.2.10)(@types/react@19.2.14)
       fast-glob: 3.3.3
