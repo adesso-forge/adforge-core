@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/adesso-forge/ds-core/compare/v1.1.1...v1.2.0) (2026-02-26)
+
+
+### Features
+
+* add Storybook stories for all pass-through components ([cb5f681](https://github.com/adesso-forge/ds-core/commit/cb5f6811935e95eeaa97dfc209488dea0fd31ab7))
+
 ## [1.1.1](https://github.com/adesso-forge/ds-core/compare/v1.1.0...v1.1.1) (2026-02-26)
 
 
