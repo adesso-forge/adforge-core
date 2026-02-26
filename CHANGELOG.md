@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/adesso-forge/ds-core/compare/v1.0.1...v1.0.2) (2026-02-26)
+
+
+### Bug Fixes
+
+* trigger downstream propagation ([b279fb5](https://github.com/adesso-forge/ds-core/commit/b279fb55f2e0fa14fec0ba98a012d42ff74c5fdf))
+
 ## [1.0.1](https://github.com/adesso-forge/ds-core/compare/v1.0.0...v1.0.1) (2026-02-26)
 
 
