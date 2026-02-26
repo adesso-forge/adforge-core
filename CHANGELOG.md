@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/adesso-forge/ds-core/compare/v1.2.1...v1.2.2) (2026-02-26)
+
+
+### Bug Fixes
+
+* add repository field to package.json, remove bootstrap step ([47a2888](https://github.com/adesso-forge/ds-core/commit/47a28880e877397ef9df6563dfab26fb3cd717ee))
+
 ## [1.2.1](https://github.com/adesso-forge/ds-core/compare/v1.2.0...v1.2.1) (2026-02-26)
 
 
