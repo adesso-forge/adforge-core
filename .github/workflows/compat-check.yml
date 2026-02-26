@@ -27,11 +27,40 @@ jobs:
           path: ${{ steps.pnpm-cache.outputs.store }}
           key: pnpm-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
           restore-keys: pnpm-${{ runner.os }}-
-      - name: Install with updated ds-shared
-        id: build
+      - name: Install updated ds-shared
         run: |
           VERSION="${{ github.event.client_payload.version }}"
           pnpm add -D @adesso-forge/ds-shared@$VERSION
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.PACKAGES_TOKEN }}
+      - name: Sync shared devDependencies
+        run: |
+          node -e "
+            const fs = require('fs');
+            const shared = JSON.parse(fs.readFileSync('node_modules/@adesso-forge/ds-shared/package.json', 'utf8'));
+            const local = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+            const sharedDev = shared.devDependencies || {};
+            const localDev = local.devDependencies || {};
+            let changed = false;
+            for (const [pkg, version] of Object.entries(sharedDev)) {
+              if (pkg.startsWith('@adesso-forge/')) continue;
+              if (localDev[pkg] && localDev[pkg] !== version) {
+                console.log(pkg + ': ' + localDev[pkg] + ' -> ' + version);
+                localDev[pkg] = version;
+                changed = true;
+              }
+            }
+            if (changed) {
+              fs.writeFileSync('package.json', JSON.stringify(local, null, 2) + '\n');
+              console.log('Synced devDependencies from ds-shared.');
+            } else {
+              console.log('No devDependency changes to sync.');
+            }
+          "
+      - name: Install synced dependencies and build
+        id: build
+        run: |
+          pnpm install
           pnpm build
         env:
           NODE_AUTH_TOKEN: ${{ secrets.PACKAGES_TOKEN }}
