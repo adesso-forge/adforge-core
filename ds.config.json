@@ -1,0 +1,24 @@
+{
+  "name": "core",
+  "displayName": "Core Design System",
+  "scope": "@adesso-forge",
+  "prefix": "forge",
+  "origin": {
+    "package": "@awesome.me/webawesome",
+    "version": "^3.2.0"
+  },
+  "registry": "https://npm.pkg.github.com",
+  "components": {
+    "extended": ["button"],
+    "excluded": [],
+    "customPrefix": "forge"
+  },
+  "themes": {
+    "shared": "src/themes/shared.css",
+    "light": "src/themes/light.css",
+    "dark": "src/themes/dark.css"
+  },
+  "storybook": {
+    "port": 6006
+  }
+}

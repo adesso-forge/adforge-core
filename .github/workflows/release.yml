@@ -1,0 +1,46 @@
+name: Release
+on:
+  push:
+    branches: [main]
+    paths-ignore: ['*.md']
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: 'https://npm.pkg.github.com'
+      - run: pnpm install --frozen-lockfile
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: pnpm build
+      - run: npx semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  notify-downstream:
+    needs: release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Dispatch to client DSs
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          for repo in ds-alpha ds-beta; do
+            gh api repos/adesso-forge/$repo/dispatches \
+              -f event_type=core-ds-update \
+              -f "client_payload[version]=$VERSION"
+          done
+        env:
+          GITHUB_TOKEN: ${{ secrets.DS_DISPATCH_TOKEN }}

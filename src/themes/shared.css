@@ -1,0 +1,27 @@
+/* @adesso-forge/core-ds — Shared tokens (scheme-agnostic)
+ * Typography, spacing, borders, focus, transitions
+ * These apply to both light and dark modes.
+ */
+
+:root {
+  /* Typography — adesso defaults */
+  --wa-font-family-sans: 'Inter', system-ui, sans-serif;
+  --wa-font-weight-action: 600;
+
+  /* Spacing — slightly tighter scale */
+  --wa-space-s: 0.625rem;
+  --wa-space-m: 1rem;
+  --wa-space-l: 1.5rem;
+
+  /* Borders — softer rounding */
+  --wa-border-radius-s: 0.375rem;
+  --wa-border-radius-m: 0.625rem;
+  --wa-border-radius-l: 1rem;
+
+  /* Focus */
+  --wa-focus-ring-width: 3px;
+
+  /* Transitions — snappier */
+  --wa-transition-fast: 120ms;
+  --wa-transition-medium: 200ms;
+}

@@ -1,0 +1,16 @@
+/* @adesso-forge/core-ds — Light mode color overrides */
+
+:root,
+.wa-light,
+.wa-dark .wa-invert {
+  /* Neutral palette — warm gray base */
+  --wa-color-neutral-95: #F8F7F6;
+  --wa-color-neutral-90: #EDECEB;
+  --wa-color-neutral-50: #8C8A87;
+  --wa-color-neutral-10: #2D2B28;
+
+  /* Surfaces */
+  --wa-color-surface-default: #FFFFFF;
+  --wa-color-surface-raised: var(--wa-color-neutral-95);
+  --wa-color-surface-lowered: var(--wa-color-neutral-90);
+}
