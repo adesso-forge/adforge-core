@@ -60,7 +60,7 @@ jobs:
       - name: Install synced dependencies and build
         id: build
         run: |
-          pnpm install
+          pnpm install --no-frozen-lockfile
           pnpm build
         env:
           NODE_AUTH_TOKEN: ${{ secrets.PACKAGES_TOKEN }}
