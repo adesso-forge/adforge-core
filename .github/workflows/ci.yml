@@ -14,6 +14,6 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
       - run: pnpm install --frozen-lockfile
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.PKG_TOKEN }}
       - run: pnpm type-check
       - run: pnpm build
