@@ -1,6 +1,6 @@
 {
   "name": "@adesso-forge/adforge-core",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "Core design system layer for adesso forge — extends Web Awesome with forge-* prefix",
   "type": "module",
   "main": "dist/index.js",

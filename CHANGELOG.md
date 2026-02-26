@@ -1,3 +1,11 @@
+## [1.1.6](https://github.com/adesso-forge/adforge-core/compare/v1.1.5...v1.1.6) (2026-02-26)
+
+
+### Bug Fixes
+
+* publish under new package name adforge-core ([b6c3b96](https://github.com/adesso-forge/adforge-core/commit/b6c3b96162560261b498e47d197aa41600d19f5f))
+* update lockfile for adforge-shared@1.2.4 ([fa68165](https://github.com/adesso-forge/adforge-core/commit/fa681652fc73c624b19eec53093b082be9673c40))
+
 ## [1.1.5](https://github.com/adesso-forge/ds-core/compare/v1.1.4...v1.1.5) (2026-02-26)
 
 
