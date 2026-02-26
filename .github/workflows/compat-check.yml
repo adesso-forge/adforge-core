@@ -1,0 +1,74 @@
+name: Platform Update Check
+on:
+  repository_dispatch:
+    types: [ds-shared-update]
+
+jobs:
+  check-compatibility:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: 'https://npm.pkg.github.com'
+      - name: Get pnpm store path
+        id: pnpm-cache
+        run: echo "store=$(pnpm store path)" >> "$GITHUB_OUTPUT"
+      - uses: actions/cache@v4
+        with:
+          path: ${{ steps.pnpm-cache.outputs.store }}
+          key: pnpm-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: pnpm-${{ runner.os }}-
+      - name: Install with updated ds-shared
+        id: build
+        run: |
+          VERSION="${{ github.event.client_payload.version }}"
+          pnpm add -D @adesso-forge/ds-shared@$VERSION
+          pnpm build
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Create PR if passing
+        if: steps.build.outcome == 'success'
+        run: |
+          VERSION="${{ github.event.client_payload.version }}"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git push origin --delete chore/ds-shared-$VERSION 2>/dev/null || true
+
+          git checkout -b chore/ds-shared-$VERSION
+          git add package.json pnpm-lock.yaml
+          git commit -m "fix: update ds-shared to $VERSION"
+          git push origin chore/ds-shared-$VERSION
+
+          if ! gh pr create \
+            --title "fix: update ds-shared to $VERSION" \
+            --body "## Platform Update
+
+          **New version:** \`@adesso-forge/ds-shared@$VERSION\`
+
+          ### Verification
+          Automated compatibility check **passed** — build succeeded against ds-shared@$VERSION."; then
+            gh issue create \
+              --title "Failed to create PR for ds-shared@$VERSION" \
+              --body "Compatibility check passed but PR creation failed. Manual action needed."
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Create issue if failing
+        if: steps.build.outcome == 'failure'
+        run: |
+          gh issue create \
+            --title "Incompatible with ds-shared@${{ github.event.client_payload.version }}" \
+            --body "Automated compatibility check against ds-shared@${{ github.event.client_payload.version }} failed. Manual intervention required."
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

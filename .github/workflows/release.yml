@@ -12,30 +12,22 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: actions/checkout@v4
-        with:
-          repository: adesso-forge/ds-shared
-          path: ds-shared
       - uses: pnpm/action-setup@v4
         with:
-          version: 9
+          version: 10
       - uses: actions/setup-node@v4
         with:
           node-version: 22
           registry-url: 'https://npm.pkg.github.com'
-      - name: Build ds-shared
-        working-directory: ds-shared
-        run: pnpm install --no-frozen-lockfile && pnpm build
-      - name: Override ds-shared resolution
-        run: |
-          node -e "
-            const pkg = require('./package.json');
-            pkg.pnpm = pkg.pnpm || {};
-            pkg.pnpm.overrides = pkg.pnpm.overrides || {};
-            pkg.pnpm.overrides['@adesso-forge/ds-shared'] = 'link:./ds-shared';
-            require('fs').writeFileSync('./package.json', JSON.stringify(pkg, null, 2) + '\n');
-          "
-      - run: pnpm install --no-frozen-lockfile
+      - name: Get pnpm store path
+        id: pnpm-cache
+        run: echo "store=$(pnpm store path)" >> "$GITHUB_OUTPUT"
+      - uses: actions/cache@v4
+        with:
+          path: ${{ steps.pnpm-cache.outputs.store }}
+          key: pnpm-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: pnpm-${{ runner.os }}-
+      - run: pnpm install --frozen-lockfile
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: pnpm build
@@ -55,6 +47,9 @@ jobs:
           else
             echo "released=false" >> "$GITHUB_OUTPUT"
           fi
+      - name: Report if no release
+        if: steps.check.outputs.released != 'true'
+        run: echo "::warning::No new version released — downstream dispatch skipped"
     outputs:
       released: ${{ steps.check.outputs.released }}
       version: ${{ steps.check.outputs.version }}
@@ -69,7 +64,8 @@ jobs:
           for repo in ds-alpha ds-beta; do
             gh api repos/adesso-forge/$repo/dispatches \
               -f event_type=core-ds-update \
-              -f "client_payload[version]=${{ needs.release.outputs.version }}"
+              -f "client_payload[version]=${{ needs.release.outputs.version }}" \
+              || { echo "::error::Failed to dispatch to $repo — check DS_DISPATCH_TOKEN"; exit 1; }
           done
         env:
           GITHUB_TOKEN: ${{ secrets.DS_DISPATCH_TOKEN }}
