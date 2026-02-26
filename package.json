@@ -30,7 +30,7 @@
     "lit": "^3.2.0"
   },
   "devDependencies": {
-    "@adesso-forge/ds-shared": "link:../ds-shared",
+    "@adesso-forge/ds-shared": "^1.0.0",
     "@storybook/addon-a11y": "^8.6.0",
     "@storybook/addon-essentials": "^8.6.0",
     "@storybook/web-components": "^8.6.17",
