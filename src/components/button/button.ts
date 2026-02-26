@@ -6,11 +6,11 @@ import { property } from 'lit/decorators.js';
 const WaButton = customElements.get('wa-button')!;
 
 export class ForgeButton extends (WaButton as unknown as typeof LitElement) {
-  static styles = [
-    ...(Array.isArray((WaButton as any).styles)
-      ? (WaButton as any).styles
-      : (WaButton as any).styles
-        ? [(WaButton as any).styles]
+  static css = [
+    ...(Array.isArray((WaButton as any).css)
+      ? (WaButton as any).css
+      : (WaButton as any).css
+        ? [(WaButton as any).css]
         : []),
     css`
       /* Core DS button additions */
