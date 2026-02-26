@@ -59,9 +59,16 @@ jobs:
     if: needs.release.outputs.released == 'true'
     runs-on: ubuntu-latest
     steps:
-      - name: Dispatch to client DSs
+      - name: Discover and dispatch to leaf repos
         run: |
-          for repo in ds-alpha ds-beta; do
+          REPOS=$(gh search repos --topic adesso-forge-leaf --owner adesso-forge --json name -q '.[].name')
+          if [ -z "$REPOS" ]; then
+            echo "::warning::No repos found with topic 'adesso-forge-leaf'"
+            exit 0
+          fi
+          echo "Found leaf repos: $REPOS"
+          for repo in $REPOS; do
+            echo "Dispatching to $repo..."
             gh api repos/adesso-forge/$repo/dispatches \
               -f event_type=core-ds-update \
               -f "client_payload[version]=${{ needs.release.outputs.version }}" \
