@@ -34,7 +34,7 @@ jobs:
           pnpm add -D @adesso-forge/ds-shared@$VERSION
           pnpm build
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.PACKAGES_TOKEN }}
       - name: Create PR if passing
         if: steps.build.outcome == 'success'
         run: |
