@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/adesso-forge/ds-core/compare/v1.2.0...v1.2.1) (2026-02-26)
+
+
+### Bug Fixes
+
+* add bootstrap step for first-time GitHub Packages publish ([f399d0f](https://github.com/adesso-forge/ds-core/commit/f399d0f8abbc6a464c0869f639dbb386ffa61874))
+
 # [1.2.0](https://github.com/adesso-forge/ds-core/compare/v1.1.1...v1.2.0) (2026-02-26)
 
 
