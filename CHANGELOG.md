@@ -1,3 +1,10 @@
+## [1.1.7](https://github.com/adesso-forge/adforge-core/compare/v1.1.6...v1.1.7) (2026-02-27)
+
+
+### Bug Fixes
+
+* add red button border ([5806f58](https://github.com/adesso-forge/adforge-core/commit/5806f58168379f458cca8be24a90fc0c56dd38ae))
+
 ## [1.1.6](https://github.com/adesso-forge/adforge-core/compare/v1.1.5...v1.1.6) (2026-02-26)
 
 
