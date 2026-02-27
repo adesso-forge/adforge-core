@@ -1,1 +1,3 @@
-export default { extends: ['@commitlint/config-conventional'] };
+import { commitlintConfig } from '@adesso-forge/adforge-shared/lint/commitlint';
+
+export default commitlintConfig;

@@ -16,8 +16,8 @@ importers:
         version: 3.3.2
     devDependencies:
       '@adesso-forge/adforge-shared':
-        specifier: 1.3.0
-        version: 1.3.0(@awesome.me/webawesome@3.2.1(@floating-ui/utils@0.2.10)(@types/react@19.2.14))(eslint@9.39.3(jiti@2.6.1))(lit@3.3.2)(typescript@5.9.3)(vite@6.4.1(@types/node@22.19.12)(jiti@2.6.1)(yaml@2.8.2))
+        specifier: 1.4.0
+        version: 1.4.0(@awesome.me/webawesome@3.2.1(@floating-ui/utils@0.2.10)(@types/react@19.2.14))(eslint@9.39.3(jiti@2.6.1))(lit@3.3.2)(typescript@5.9.3)(vite@6.4.1(@types/node@22.19.12)(jiti@2.6.1)(yaml@2.8.2))
       '@commitlint/cli':
         specifier: ^19.0.0
         version: 19.8.1(@types/node@22.19.12)(typescript@5.9.3)
@@ -90,8 +90,8 @@ packages:
   '@actions/io@3.0.2':
     resolution: {integrity: sha512-nRBchcMM+QK1pdjO7/idu86rbJI5YHUKCvKs0KxnSYbVe3F51UfGxuZX4Qy/fWlp6l7gWFwIkrOzN+oUK03kfw==}
 
-  '@adesso-forge/adforge-shared@1.3.0':
-    resolution: {integrity: sha512-fY45TYWv8uCeH+aD30YCnWk26eCIa8imIZqpAOQh9oiHT6Kgsjru966eVE6jb/4Sibjbw7ubg6bO5e9G8qn9fw==, tarball: https://npm.pkg.github.com/download/@adesso-forge/adforge-shared/1.3.0/eb1ee221a41c06ac8d2df08554015425ab327347}
+  '@adesso-forge/adforge-shared@1.4.0':
+    resolution: {integrity: sha512-WRV3BbchPJMrPc1ZUzqgRtClOv4yueb5Clh00P/dw5bu8EhbcSrGUBuyiz+BJzUBFVtLbOp3Zz3IQ1yJhATcrg==, tarball: https://npm.pkg.github.com/download/@adesso-forge/adforge-shared/1.4.0/66a642b3a183b7a172210b2f1f7bf43708f23ce9}
     engines: {node: '>=22.0.0'}
     peerDependencies:
       '@awesome.me/webawesome': ^3.2.0
@@ -3210,7 +3210,7 @@ snapshots:
 
   '@actions/io@3.0.2': {}
 
-  '@adesso-forge/adforge-shared@1.3.0(@awesome.me/webawesome@3.2.1(@floating-ui/utils@0.2.10)(@types/react@19.2.14))(eslint@9.39.3(jiti@2.6.1))(lit@3.3.2)(typescript@5.9.3)(vite@6.4.1(@types/node@22.19.12)(jiti@2.6.1)(yaml@2.8.2))':
+  '@adesso-forge/adforge-shared@1.4.0(@awesome.me/webawesome@3.2.1(@floating-ui/utils@0.2.10)(@types/react@19.2.14))(eslint@9.39.3(jiti@2.6.1))(lit@3.3.2)(typescript@5.9.3)(vite@6.4.1(@types/node@22.19.12)(jiti@2.6.1)(yaml@2.8.2))':
     dependencies:
       '@awesome.me/webawesome': 3.2.1(@floating-ui/utils@0.2.10)(@types/react@19.2.14)
       eslint-config-prettier: 10.1.8(eslint@9.39.3(jiti@2.6.1))
