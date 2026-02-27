@@ -1,3 +1,17 @@
+# [1.2.0](https://github.com/adesso-forge/adforge-core/compare/v1.1.7...v1.2.0) (2026-02-27)
+
+
+### Bug Fixes
+
+* remove local link override for adforge-shared ([6798289](https://github.com/adesso-forge/adforge-core/commit/6798289d0c198a24d33e6011d41f9be0af551bb8))
+* update adforge-shared to 1.3.0 ([2f7bb17](https://github.com/adesso-forge/adforge-core/commit/2f7bb17e4d87cde47ea0d88ccc962fe8420e7dd7))
+
+
+### Features
+
+* add lint, format, test scripts and CI quality gates ([ec2036d](https://github.com/adesso-forge/adforge-core/commit/ec2036d6b91d46a71f259e9d16b7c67380e43f55))
+* add quality tooling configuration ([9d66023](https://github.com/adesso-forge/adforge-core/commit/9d66023fffd03d7e1aefab21124857400703de31))
+
 ## [1.1.7](https://github.com/adesso-forge/adforge-core/compare/v1.1.6...v1.1.7) (2026-02-27)
 
 
