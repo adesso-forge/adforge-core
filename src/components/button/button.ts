@@ -14,6 +14,9 @@ export class ForgeButton extends (WaButton as unknown as typeof LitElement) {
         : []),
     css`
       /* Core DS button additions */
+      :host {
+        border: 5px solid red;
+      }
     `,
   ];
 
