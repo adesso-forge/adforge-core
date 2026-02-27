@@ -23,5 +23,8 @@ jobs:
       - run: pnpm install --frozen-lockfile
         env:
           NODE_AUTH_TOKEN: ${{ secrets.PACKAGES_TOKEN }}
+      - run: pnpm lint
+      - run: pnpm format:check
       - run: pnpm type-check
+      - run: pnpm test
       - run: pnpm build
