@@ -73,10 +73,7 @@
   "pnpm": {
     "onlyBuiltDependencies": [
       "esbuild"
-    ],
-    "overrides": {
-      "@adesso-forge/adforge-shared": "link:../adforge-shared"
-    }
+    ]
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
