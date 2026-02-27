@@ -12,5 +12,11 @@ type Story = StoryObj;
 
 export const Default: Story = {
   render: () =>
-    html`<forge-zoomable-frame><div style="width:400px;height:300px;background:var(--wa-color-neutral-100);display:flex;align-items:center;justify-content:center">Zoomable content</div></forge-zoomable-frame>`,
+    html`<forge-zoomable-frame
+      ><div
+        style="width:400px;height:300px;background:var(--wa-color-neutral-100);display:flex;align-items:center;justify-content:center"
+      >
+        Zoomable content
+      </div></forge-zoomable-frame
+    >`,
 };

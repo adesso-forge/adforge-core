@@ -11,6 +11,5 @@ export default meta;
 type Story = StoryObj;
 
 export const Default: Story = {
-  render: () =>
-    html`<forge-copy-button value="Text to copy"></forge-copy-button>`,
+  render: () => html`<forge-copy-button value="Text to copy"></forge-copy-button>`,
 };

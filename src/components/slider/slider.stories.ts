@@ -11,6 +11,5 @@ export default meta;
 type Story = StoryObj;
 
 export const Default: Story = {
-  render: () =>
-    html`<forge-slider label="Volume" value="50"></forge-slider>`,
+  render: () => html`<forge-slider label="Volume" value="50"></forge-slider>`,
 };

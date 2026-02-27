@@ -12,5 +12,9 @@ type Story = StoryObj;
 
 export const Default: Story = {
   render: () =>
-    html`<forge-format-number value="1234.56" type="currency" currency="EUR"></forge-format-number>`,
+    html`<forge-format-number
+      value="1234.56"
+      type="currency"
+      currency="EUR"
+    ></forge-format-number>`,
 };

@@ -12,5 +12,8 @@ type Story = StoryObj;
 
 export const Default: Story = {
   render: () =>
-    html`<forge-button-group><forge-button>Left</forge-button><forge-button>Center</forge-button><forge-button>Right</forge-button></forge-button-group>`,
+    html`<forge-button-group
+      ><forge-button>Left</forge-button><forge-button>Center</forge-button
+      ><forge-button>Right</forge-button></forge-button-group
+    >`,
 };

@@ -12,5 +12,8 @@ type Story = StoryObj;
 
 export const Default: Story = {
   render: () =>
-    html`<forge-tree><forge-tree-item>Item 1<forge-tree-item>Nested 1</forge-tree-item></forge-tree-item><forge-tree-item>Item 2</forge-tree-item></forge-tree>`,
+    html`<forge-tree
+      ><forge-tree-item>Item 1<forge-tree-item>Nested 1</forge-tree-item></forge-tree-item
+      ><forge-tree-item>Item 2</forge-tree-item></forge-tree
+    >`,
 };

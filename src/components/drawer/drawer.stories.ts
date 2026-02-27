@@ -11,6 +11,5 @@ export default meta;
 type Story = StoryObj;
 
 export const Default: Story = {
-  render: () =>
-    html`<forge-drawer label="Drawer" open>Drawer content goes here.</forge-drawer>`,
+  render: () => html`<forge-drawer label="Drawer" open>Drawer content goes here.</forge-drawer>`,
 };

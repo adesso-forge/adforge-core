@@ -11,6 +11,5 @@ export default meta;
 type Story = StoryObj;
 
 export const Default: Story = {
-  render: () =>
-    html`<forge-callout>This is an important callout message.</forge-callout>`,
+  render: () => html`<forge-callout>This is an important callout message.</forge-callout>`,
 };

@@ -12,5 +12,8 @@ type Story = StoryObj;
 
 export const Default: Story = {
   render: () =>
-    html`<forge-details><span slot="summary">Click to expand</span>This is the details content that was hidden.</forge-details>`,
+    html`<forge-details
+      ><span slot="summary">Click to expand</span>This is the details content that was
+      hidden.</forge-details
+    >`,
 };

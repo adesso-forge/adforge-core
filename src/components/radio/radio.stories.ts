@@ -11,6 +11,5 @@ export default meta;
 type Story = StoryObj;
 
 export const Default: Story = {
-  render: () =>
-    html`<forge-radio value="1">Radio option</forge-radio>`,
+  render: () => html`<forge-radio value="1">Radio option</forge-radio>`,
 };

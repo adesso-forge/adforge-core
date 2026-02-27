@@ -11,6 +11,5 @@ export default meta;
 type Story = StoryObj;
 
 export const Default: Story = {
-  render: () =>
-    html`<forge-tab panel="tab-1">Tab Label</forge-tab>`,
+  render: () => html`<forge-tab panel="tab-1">Tab Label</forge-tab>`,
 };

@@ -14,9 +14,6 @@ export class ForgeButton extends (WaButton as unknown as typeof LitElement) {
         : []),
     css`
       /* Core DS button additions */
-      :host {
-        border: 5px solid red;
-      }
     `,
   ];
 
@@ -41,7 +38,7 @@ export class ForgeButton extends (WaButton as unknown as typeof LitElement) {
         detail: { component: 'button', action: 'click' },
         bubbles: true,
         composed: true,
-      })
+      }),
     );
   };
 }

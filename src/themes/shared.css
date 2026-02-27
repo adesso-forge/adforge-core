@@ -24,4 +24,6 @@
   /* Transitions — snappier */
   --wa-transition-fast: 120ms;
   --wa-transition-medium: 200ms;
+
+  --wa-color-brand-fill-loud: purple;
 }

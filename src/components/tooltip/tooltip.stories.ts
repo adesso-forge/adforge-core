@@ -12,5 +12,7 @@ type Story = StoryObj;
 
 export const Default: Story = {
   render: () =>
-    html`<forge-tooltip content="Tooltip text"><forge-button slot="content">Hover me</forge-button></forge-tooltip>`,
+    html`<forge-tooltip content="Tooltip text"
+      ><forge-button slot="content">Hover me</forge-button></forge-tooltip
+    >`,
 };

@@ -69,10 +69,15 @@ export const LongContent: Story = {
       Open Scrollable Dialog
     </forge-button>
     <forge-dialog label="Terms of Service">
-      ${Array.from({ length: 10 }, (_, i) => html`
-        <p>Section ${i + 1}: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      `)}
+      ${Array.from(
+        { length: 10 },
+        (_, i) => html`
+          <p>
+            Section ${i + 1}: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        `,
+      )}
       <forge-button slot="footer" variant="brand">Accept</forge-button>
     </forge-dialog>
   `,

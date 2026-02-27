@@ -8,7 +8,9 @@ export const forgeDialogStyles = css`
 
   wa-dialog::part(panel) {
     border-radius: var(--wa-border-radius-l);
-    box-shadow: 0 20px 25px rgb(0 0 0 / 0.1), 0 8px 10px rgb(0 0 0 / 0.04);
+    box-shadow:
+      0 20px 25px rgb(0 0 0 / 0.1),
+      0 8px 10px rgb(0 0 0 / 0.04);
   }
 
   wa-dialog::part(header) {

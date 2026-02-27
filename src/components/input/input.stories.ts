@@ -60,9 +60,7 @@ export const Sizes: Story = {
 };
 
 export const Clearable: Story = {
-  render: () => html`
-    <forge-input label="Clearable" clearable value="Clear me"></forge-input>
-  `,
+  render: () => html` <forge-input label="Clearable" clearable value="Clear me"></forge-input> `,
 };
 
 export const Disabled: Story = {

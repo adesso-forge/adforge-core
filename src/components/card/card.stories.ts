@@ -47,7 +47,7 @@ export const MultipleCards: Story = {
               <forge-button size="small" variant="text">Details</forge-button>
             </div>
           </forge-card>
-        `
+        `,
       )}
     </div>
   `,

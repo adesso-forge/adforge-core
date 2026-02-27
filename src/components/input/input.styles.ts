@@ -8,8 +8,9 @@ export const forgeInputStyles = css`
   }
 
   wa-input::part(base) {
-    transition: border-color var(--wa-transition-fast) ease,
-                box-shadow var(--wa-transition-fast) ease;
+    transition:
+      border-color var(--wa-transition-fast) ease,
+      box-shadow var(--wa-transition-fast) ease;
   }
 
   wa-input::part(base):focus-within {

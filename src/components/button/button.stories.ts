@@ -86,7 +86,9 @@ export const Loading: Story = {
 
 export const WithTrackClicks: Story = {
   render: () => html`
-    <forge-button track-clicks variant="brand"
+    <forge-button
+      track-clicks
+      variant="brand"
       @forge-track=${(e: CustomEvent) => console.log('Tracked:', e.detail)}
     >
       Track Clicks

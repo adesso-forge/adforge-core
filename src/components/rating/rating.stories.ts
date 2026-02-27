@@ -11,6 +11,5 @@ export default meta;
 type Story = StoryObj;
 
 export const Default: Story = {
-  render: () =>
-    html`<forge-rating value="3"></forge-rating>`,
+  render: () => html`<forge-rating value="3"></forge-rating>`,
 };

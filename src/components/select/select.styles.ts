@@ -9,8 +9,9 @@ export const forgeSelectStyles = css`
 
   wa-select::part(combobox) {
     font-family: var(--wa-font-family-sans);
-    transition: border-color var(--wa-transition-fast) ease,
-                box-shadow var(--wa-transition-fast) ease;
+    transition:
+      border-color var(--wa-transition-fast) ease,
+      box-shadow var(--wa-transition-fast) ease;
   }
 
   wa-select::part(combobox):focus-within {
@@ -30,6 +31,8 @@ export const forgeSelectStyles = css`
 
   wa-select::part(listbox) {
     border-radius: var(--wa-border-radius-m);
-    box-shadow: 0 10px 15px rgb(0 0 0 / 0.1), 0 4px 6px rgb(0 0 0 / 0.05);
+    box-shadow:
+      0 10px 15px rgb(0 0 0 / 0.1),
+      0 4px 6px rgb(0 0 0 / 0.05);
   }
 `;

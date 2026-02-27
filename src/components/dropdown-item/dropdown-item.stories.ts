@@ -11,6 +11,5 @@ export default meta;
 type Story = StoryObj;
 
 export const Default: Story = {
-  render: () =>
-    html`<forge-dropdown-item>Menu Item</forge-dropdown-item>`,
+  render: () => html`<forge-dropdown-item>Menu Item</forge-dropdown-item>`,
 };

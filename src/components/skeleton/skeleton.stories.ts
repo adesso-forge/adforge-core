@@ -11,11 +11,13 @@ export default meta;
 type Story = StoryObj;
 
 export const Default: Story = {
-  render: () =>
-    html`<forge-skeleton effect="sheen"></forge-skeleton>`,
+  render: () => html`<forge-skeleton effect="sheen"></forge-skeleton>`,
 };
 
 export const Circle: Story = {
   render: () =>
-    html`<forge-skeleton effect="sheen" style="width:50px;height:50px;--border-radius:50%"></forge-skeleton>`,
+    html`<forge-skeleton
+      effect="sheen"
+      style="width:50px;height:50px;--border-radius:50%"
+    ></forge-skeleton>`,
 };

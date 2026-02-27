@@ -11,6 +11,5 @@ export default meta;
 type Story = StoryObj;
 
 export const Default: Story = {
-  render: () =>
-    html`<forge-progress-ring value="60"></forge-progress-ring>`,
+  render: () => html`<forge-progress-ring value="60"></forge-progress-ring>`,
 };

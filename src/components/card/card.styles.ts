@@ -8,12 +8,16 @@ export const forgeCardStyles = css`
   }
 
   wa-card::part(base) {
-    box-shadow: 0 1px 3px rgb(0 0 0 / 0.08), 0 1px 2px rgb(0 0 0 / 0.06);
+    box-shadow:
+      0 1px 3px rgb(0 0 0 / 0.08),
+      0 1px 2px rgb(0 0 0 / 0.06);
     transition: box-shadow var(--wa-transition-medium) ease;
   }
 
   wa-card::part(base):hover {
-    box-shadow: 0 4px 6px rgb(0 0 0 / 0.1), 0 2px 4px rgb(0 0 0 / 0.06);
+    box-shadow:
+      0 4px 6px rgb(0 0 0 / 0.1),
+      0 2px 4px rgb(0 0 0 / 0.06);
   }
 
   wa-card::part(header) {

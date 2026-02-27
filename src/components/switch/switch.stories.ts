@@ -11,6 +11,5 @@ export default meta;
 type Story = StoryObj;
 
 export const Default: Story = {
-  render: () =>
-    html`<forge-switch>Toggle me</forge-switch>`,
+  render: () => html`<forge-switch>Toggle me</forge-switch>`,
 };

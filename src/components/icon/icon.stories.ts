@@ -11,6 +11,5 @@ export default meta;
 type Story = StoryObj;
 
 export const Default: Story = {
-  render: () =>
-    html`<forge-icon name="gear"></forge-icon>`,
+  render: () => html`<forge-icon name="gear"></forge-icon>`,
 };

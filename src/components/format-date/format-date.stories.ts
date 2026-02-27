@@ -12,5 +12,10 @@ type Story = StoryObj;
 
 export const Default: Story = {
   render: () =>
-    html`<forge-format-date date="2026-02-26T12:00:00" month="long" day="numeric" year="numeric"></forge-format-date>`,
+    html`<forge-format-date
+      date="2026-02-26T12:00:00"
+      month="long"
+      day="numeric"
+      year="numeric"
+    ></forge-format-date>`,
 };

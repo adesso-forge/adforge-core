@@ -12,5 +12,9 @@ type Story = StoryObj;
 
 export const Default: Story = {
   render: () =>
-    html`<forge-animation name="bounce" duration="1000" iterations="Infinity" play><div style="width:100px;height:100px;background:var(--wa-color-primary-600);border-radius:8px"></div></forge-animation>`,
+    html`<forge-animation name="bounce" duration="1000" iterations="Infinity" play
+      ><div
+        style="width:100px;height:100px;background:var(--wa-color-primary-600);border-radius:8px"
+      ></div
+    ></forge-animation>`,
 };

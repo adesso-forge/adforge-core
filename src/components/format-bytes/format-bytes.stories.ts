@@ -11,6 +11,5 @@ export default meta;
 type Story = StoryObj;
 
 export const Default: Story = {
-  render: () =>
-    html`<forge-format-bytes value="1024"></forge-format-bytes>`,
+  render: () => html`<forge-format-bytes value="1024"></forge-format-bytes>`,
 };

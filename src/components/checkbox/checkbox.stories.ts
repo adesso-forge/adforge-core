@@ -11,6 +11,5 @@ export default meta;
 type Story = StoryObj;
 
 export const Default: Story = {
-  render: () =>
-    html`<forge-checkbox>Check me</forge-checkbox>`,
+  render: () => html`<forge-checkbox>Check me</forge-checkbox>`,
 };

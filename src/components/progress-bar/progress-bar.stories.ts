@@ -11,6 +11,5 @@ export default meta;
 type Story = StoryObj;
 
 export const Default: Story = {
-  render: () =>
-    html`<forge-progress-bar value="60" label="Progress"></forge-progress-bar>`,
+  render: () => html`<forge-progress-bar value="60" label="Progress"></forge-progress-bar>`,
 };

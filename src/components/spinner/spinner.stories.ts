@@ -11,6 +11,5 @@ export default meta;
 type Story = StoryObj;
 
 export const Default: Story = {
-  render: () =>
-    html`<forge-spinner></forge-spinner>`,
+  render: () => html`<forge-spinner></forge-spinner>`,
 };

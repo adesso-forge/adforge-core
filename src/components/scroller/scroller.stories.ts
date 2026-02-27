@@ -12,5 +12,18 @@ type Story = StoryObj;
 
 export const Default: Story = {
   render: () =>
-    html`<forge-scroller><div style="white-space:nowrap"><span style="display:inline-block;width:200px;height:100px;background:var(--wa-color-primary-100);margin:0.25rem">Item 1</span><span style="display:inline-block;width:200px;height:100px;background:var(--wa-color-primary-200);margin:0.25rem">Item 2</span><span style="display:inline-block;width:200px;height:100px;background:var(--wa-color-primary-300);margin:0.25rem">Item 3</span></div></forge-scroller>`,
+    html`<forge-scroller
+      ><div style="white-space:nowrap">
+        <span
+          style="display:inline-block;width:200px;height:100px;background:var(--wa-color-primary-100);margin:0.25rem"
+          >Item 1</span
+        ><span
+          style="display:inline-block;width:200px;height:100px;background:var(--wa-color-primary-200);margin:0.25rem"
+          >Item 2</span
+        ><span
+          style="display:inline-block;width:200px;height:100px;background:var(--wa-color-primary-300);margin:0.25rem"
+          >Item 3</span
+        >
+      </div></forge-scroller
+    >`,
 };

@@ -11,6 +11,5 @@ export default meta;
 type Story = StoryObj;
 
 export const Default: Story = {
-  render: () =>
-    html`<forge-color-picker label="Color"></forge-color-picker>`,
+  render: () => html`<forge-color-picker label="Color"></forge-color-picker>`,
 };

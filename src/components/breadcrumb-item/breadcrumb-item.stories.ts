@@ -11,6 +11,5 @@ export default meta;
 type Story = StoryObj;
 
 export const Default: Story = {
-  render: () =>
-    html`<forge-breadcrumb-item>Item</forge-breadcrumb-item>`,
+  render: () => html`<forge-breadcrumb-item>Item</forge-breadcrumb-item>`,
 };

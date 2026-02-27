@@ -12,5 +12,8 @@ type Story = StoryObj;
 
 export const Default: Story = {
   render: () =>
-    html`<forge-popover><forge-button slot="anchor">Hover me</forge-button><div>Popover content</div></forge-popover>`,
+    html`<forge-popover
+      ><forge-button slot="anchor">Hover me</forge-button>
+      <div>Popover content</div></forge-popover
+    >`,
 };

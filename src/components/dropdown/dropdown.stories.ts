@@ -12,5 +12,8 @@ type Story = StoryObj;
 
 export const Default: Story = {
   render: () =>
-    html`<forge-dropdown><forge-button slot="trigger" caret>Dropdown</forge-button><div style="padding:0.5rem">Dropdown content</div></forge-dropdown>`,
+    html`<forge-dropdown
+      ><forge-button slot="trigger" caret>Dropdown</forge-button>
+      <div style="padding:0.5rem">Dropdown content</div></forge-dropdown
+    >`,
 };
