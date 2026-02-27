@@ -40,7 +40,7 @@
     "lit": "^3.3.2"
   },
   "devDependencies": {
-    "@adesso-forge/adforge-shared": "1.3.0",
+    "@adesso-forge/adforge-shared": "1.4.0",
     "@commitlint/cli": "^19.0.0",
     "@commitlint/config-conventional": "^19.0.0",
     "@semantic-release/changelog": "^6.0.3",
